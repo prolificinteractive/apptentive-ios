@@ -15,7 +15,6 @@
 #import "ApptentiveInteraction.h"
 
 NSString *const ATInteractionRatingDialogEventLabelLaunch = @"launch";
-NSString *const ATInteractionRatingDialogEventLabelCancel = @"cancel";
 NSString *const ATInteractionRatingDialogEventLabelRate = @"rate";
 NSString *const ATInteractionRatingDialogEventLabelRemind = @"remind";
 NSString *const ATInteractionRatingDialogEventLabelDecline = @"decline";
@@ -88,14 +87,17 @@ NSString *const ATInteractionRatingDialogEventLabelDecline = @"decline";
 	UIAlertController *alertController = [UIAlertController alertControllerWithTitle:self.title message:self.body preferredStyle:UIAlertControllerStyleAlert];
 
 	[alertController addAction:[UIAlertAction actionWithTitle:self.rateText style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+		[[NSNotificationCenter defaultCenter] postNotificationName:ApptentiveInteractionRatingDialogEventLabelRateNotification object:self];
 		[self.interaction engage:ATInteractionRatingDialogEventLabelRate fromViewController:self.viewController];
 	}]];
 
 	[alertController addAction:[UIAlertAction actionWithTitle:self.remindText style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+		[[NSNotificationCenter defaultCenter] postNotificationName:ApptentiveInteractionRatingDialogEventLabelRemindNotification object:self];
 		[self.interaction engage:ATInteractionRatingDialogEventLabelRemind fromViewController:self.viewController];
 	}]];
 
 	[alertController addAction:[UIAlertAction actionWithTitle:self.declineText style:UIAlertActionStyleCancel handler:^(UIAlertAction *action) {
+		[[NSNotificationCenter defaultCenter] postNotificationName:ApptentiveInteractionRatingDialogEventLabelDeclineNotification object:self];
 		[self.interaction engage:ATInteractionRatingDialogEventLabelDecline fromViewController:self.viewController];
 	}]];
 

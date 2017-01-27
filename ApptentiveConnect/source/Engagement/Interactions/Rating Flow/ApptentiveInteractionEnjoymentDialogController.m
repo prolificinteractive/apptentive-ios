@@ -86,11 +86,13 @@ NSString *const ATInteractionEnjoymentDialogEventLabelNo = @"no";
 				self.viewController = candidateVC;
 			}
 		}
-		
+
+		[[NSNotificationCenter defaultCenter] postNotificationName:ApptentiveAppRatingFlowUserDeclinedToRateAppNotification object:self];
         [self.interaction engage:ATInteractionEnjoymentDialogEventLabelNo fromViewController:self.viewController];
 	}]];
 
 	[alertController addAction:[UIAlertAction actionWithTitle:self.yesText style:UIAlertActionStyleDefault handler:^(UIAlertAction *action) {
+		[[NSNotificationCenter defaultCenter] postNotificationName:ApptentiveAppRatingFlowUserAgreedToRateAppNotification object:self];
         [self.interaction engage:ATInteractionEnjoymentDialogEventLabelYes fromViewController:self.viewController];
 	}]];
 

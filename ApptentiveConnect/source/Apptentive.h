@@ -34,11 +34,23 @@ extern NSString *const ApptentiveMessageCenterUnreadCountChangedNotification;
 /** Notification sent when the user has agreed to rate the application. */
 extern NSString *const ApptentiveAppRatingFlowUserAgreedToRateAppNotification;
 
+/** Notification sent when the user has declined to rate the application. */
+extern NSString *const ApptentiveAppRatingFlowUserDeclinedToRateAppNotification;
+
 /** Notification sent when a survey is shown. */
 extern NSString *const ApptentiveSurveyShownNotification;
 
 /** Notification sent when a survey is submitted by the user. */
 extern NSString *const ApptentiveSurveySentNotification;
+
+/** Notification sent when the user decides to rate the application. */
+extern NSString *const ApptentiveInteractionRatingDialogEventLabelRateNotification;
+
+/** Notification sent when the user decides to be reminded later to rate the application. */
+extern NSString *const ApptentiveInteractionRatingDialogEventLabelRemindNotification;
+
+/** Notification sent when the user decides to not rate the application. */
+extern NSString *const ApptentiveInteractionRatingDialogEventLabelDeclineNotification;
 
 /**
  When a survey is shown or sent, notification's userInfo dictionary will contain the ApptentiveSurveyIDKey key.

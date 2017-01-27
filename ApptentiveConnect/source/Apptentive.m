@@ -24,9 +24,13 @@
 NSString *const ApptentiveMessageCenterUnreadCountChangedNotification = @"ApptentiveMessageCenterUnreadCountChangedNotification";
 
 NSString *const ApptentiveAppRatingFlowUserAgreedToRateAppNotification = @"ApptentiveAppRatingFlowUserAgreedToRateAppNotification";
-
+NSString *const ApptentiveAppRatingFlowUserDeclinedToRateAppNotification = @"ApptentiveAppRatingFlowUserDeclinedToRateAppNotification";
 NSString *const ApptentiveSurveyShownNotification = @"ApptentiveSurveyShownNotification";
 NSString *const ApptentiveSurveySentNotification = @"ApptentiveSurveySentNotification";
+NSString *const ApptentiveInteractionRatingDialogEventLabelRateNotification = @"ApptentiveInteractionRatingDialogEventLabelRateNotification";
+NSString *const ApptentiveInteractionRatingDialogEventLabelRemindNotification = @"ApptentiveInteractionRatingDialogEventLabelRemindNotification";
+NSString *const ApptentiveInteractionRatingDialogEventLabelDeclineNotification = @"ApptentiveInteractionRatingDialogEventLabelDeclineNotification";
+
 NSString *const ApptentiveSurveyIDKey = @"ApptentiveSurveyIDKey";
 
 NSString *const ApptentiveCustomPersonDataChangedNotification = @"ApptentiveCustomPersonDataChangedNotification";
